@@ -1,0 +1,121 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    
+    
+    background-color: hsl(30, 38%, 92%);
+}
+.box {
+    display: flex;
+    width: 480px;
+    height: 360px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box .image {
+    min-width: 50%;
+    height: 100%;
+    background-image: url(/images/image-product-desktop.jpg);
+    background-size: cover;
+    
+
+}
+.box .text { 
+    padding: 25px;
+}
+.box .text .top {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; 
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+}
+.box .text h1 {
+    font-family: 'Fraunces', sans-serif;
+    color: hsl(212, 21%, 14%);
+    margin: 10px auto;
+    font-size: 26px;
+    line-height: 1 ;
+}
+.box .text p {
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    margin: 20px auto;
+    line-height: 1.5;
+}
+.box .text .price {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+}
+.box .text .price::after {
+    content: "$169.99";
+    color:hsl(228, 12%, 48%);
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -55px;
+    text-decoration: line-through;
+    font-weight: normal;
+}
+.box a {
+    display: block;
+    text-decoration: none;
+    background-color: hsl(158, 36%, 37%);
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+}
+.box svg {
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+@media (max-width: 376px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 335px;
+        min-height: 600px;
+        margin: 0 auto;
+    }
+    .box .image {
+        width: 100%;
+        min-height: 235px;
+        background-image: url(/challenge-two/images/image-product-mobile.jpg);
+    }
+    .box .text {
+        min-height: 365px;
+        width: 100%;
+    }
+    .box .text h1 {
+        font-size: 28px;
+    }
+    .box .text p {
+        font-size: 13px;
+    }
+    .box a {
+        height: 50px;
+    }
+}
