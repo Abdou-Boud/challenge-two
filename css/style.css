@@ -26,7 +26,7 @@ body {
 .box .image {
     min-width: 50%;
     height: 100%;
-    background-image: url(/images/image-product-desktop.jpg);
+    background-image: url(/challenge-two/images/image-product-desktop.jpg);
     background-size: cover;
     
 
